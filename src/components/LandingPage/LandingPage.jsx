@@ -1,6 +1,7 @@
 import {useState , useEffect} from 'react'
 import {nicknames} from '../../data/content'
 import { motion, AnimatePresence } from 'framer-motion'
+import Sparkles from './Sparkles'
 
 export default function LandingPage() {
     
@@ -37,7 +38,7 @@ export default function LandingPage() {
 
     return (
     <div className="w-screen h-screen bg-[#462255] flex flex-col justify-center items-center">
-
+        <Sparkles />
         {!nameComplete ? (
             <AnimatePresence mode="wait">
                 <motion.p
