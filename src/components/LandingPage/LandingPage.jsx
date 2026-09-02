@@ -2,6 +2,7 @@ import {useState , useEffect} from 'react'
 import {nicknames} from '../../data/content'
 import { motion, AnimatePresence } from 'framer-motion'
 import Sparkles from './Sparkles'
+import Confetti from 'react-confetti'
 
 export default function LandingPage() {
     
@@ -37,8 +38,9 @@ export default function LandingPage() {
 
 
     return (
-    <div className="w-screen h-screen bg-[#462255] flex flex-col justify-center items-center">
+    <div className="w-screen min-h-screen bg-[#462255] flex flex-col justify-center items-center overflow-hidden">
         <Sparkles />
+        {showText && <Confetti recycle={false} numberOfPieces={320} />}
         {!nameComplete ? (
             <AnimatePresence mode="wait">
                 <motion.p
@@ -56,15 +58,15 @@ export default function LandingPage() {
                 <div />
             ) : (
             <div className="flex flex-col items-center gap-6">
-                <p className="text-base md:text-lg text-[#B58DB6] text-center max-w-md mx-auto">
-                your message text here
+                <p className="font-['Cormorant_Garamond'] text-lg text-[#FFF5F5] text-center max-w-xs mx-auto leading-loose px-8">
+                One name wasn't enough for something so ineffable. naming something this rare and precious honestly takes a lot of attempts. but we did it lol hehe. We just needed that many names to finally say it right.
                 </p>
 
-                <p className="text-xs md:text-sm text-[#9A98B5] font-normal">
-                ps. my favourite has always been your highness 👑
+                <p className="font-['Cormorant_Garamond'] text-base text-[#B58DB6] italic text-center mt-4 text-lg font-bold">
+                ps. my favourite has always been your highness/Majesty 👑
                 </p>
 
-                <button className="rounded-xl border border-[#B58DB6] text-[#B58DB6] p-4 md:p-6 text-[#B58DB6]">
+                <button className="mt-6 px-8 py-3 rounded-full border-2 border-[#B58DB6] text-[#FFF5F5] font-['Nunito'] text-sm tracking-widest uppercase hover:bg-[#B58DB6] hover:text-[#462255] transition-all duration-300">
                 Open your gift 🎁
                 </button>
             </div>

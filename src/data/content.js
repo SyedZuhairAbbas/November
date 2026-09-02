@@ -1,17 +1,17 @@
 export const nicknames = [
     "Your Highness",
     "Your Honor",
-    "Your Majesty",
-    "Your Excellency",
-    "Madam jee",
-    "Crybaby goblin",
-    "Goblin san",
-    "Kiddo",
-    "Micro Majesty",
-    "Bite Sized Boss",
-    "Mini Madam",
-    "Tiny Terror",
-    "Angelic Goblin",
+    // "Your Majesty",
+    // "Your Excellency",
+    // "Madam jee",
+    // "Crybaby goblin",
+    // "Goblin san",
+    // "Kiddo",
+    // "Micro Majesty",
+    // "Bite Sized Boss",
+    // "Mini Madam",
+    // "Tiny Terror",
+    // "Angelic Goblin",
 ]
 
 export const polaroids = [
