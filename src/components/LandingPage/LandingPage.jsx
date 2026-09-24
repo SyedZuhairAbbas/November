@@ -1,6 +1,6 @@
 import {useState , useEffect} from 'react'
 import {nicknames} from '../../data/content'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence} from 'framer-motion'
 import Sparkles from './Sparkles'
 import Confetti from 'react-confetti'
 
@@ -57,19 +57,34 @@ export default function LandingPage() {
         ) : !showText ? (
                 <div />
             ) : (
-            <div className="flex flex-col items-center gap-6">
-                <p className="font-['Cormorant_Garamond'] text-lg text-[#FFF5F5] text-center max-w-xs mx-auto leading-loose px-8">
+            <motion.div className="flex flex-col items-center gap-6">
+                <motion.p
+                    className="font-['Cormorant_Garamond'] text-lg text-[#FFF5F5] text-center max-w-xs mx-auto leading-loose px-8"
+                    initial={{opacity: 0 , y: -20}}
+                    animate={{opacity: 1 , y: 0}}
+                    transition={{duration: 0.8 , delay: 0.2}}
+                >
                 One name wasn't enough for something so ineffable. naming something this rare and precious honestly takes a lot of attempts. but we did it lol hehe. We just needed that many names to finally say it right.
-                </p>
+                </motion.p>
 
-                <p className="font-['Cormorant_Garamond'] text-base text-[#B58DB6] italic text-center mt-4 text-lg font-bold">
+                <motion.p
+                    className="font-['Cormorant_Garamond'] text-base text-[#B58DB6] italic text-center mt-4 text-lg font-bold"
+                    initial={{opacity: 0 , x: -20}}
+                    animate={{opacity: 1 , x: 0}}
+                    transition={{duration: 0.8 , delay: 0.8}}
+                >
                 ps. my favourite has always been your highness/Majesty 👑
-                </p>
+                </motion.p>
 
-                <button className="mt-6 px-8 py-3 rounded-full border-2 border-[#B58DB6] text-[#FFF5F5] font-['Nunito'] text-sm tracking-widest uppercase hover:bg-[#B58DB6] hover:text-[#462255] transition-all duration-300">
+                <motion.button
+                    className="mt-6 px-8 py-3 rounded-full border-2 border-[#B58DB6] text-[#FFF5F5] font-['Nunito'] text-sm tracking-widest uppercase hover:bg-[#B58DB6] hover:text-[#462255] transition-all duration-300"
+                    initial={{opacity: 0 , x: -20}}
+                    animate={{opacity: 1 , x: 0}}
+                    transition={{duration: 0.8 , delay: 2}}
+                >
                 Open your gift 🎁
-                </button>
-            </div>
+                </motion.button>
+            </motion.div>
         )}
 
     </div>
